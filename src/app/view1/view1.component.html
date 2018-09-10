@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h2>{{currentObj.name}}</h2>
+      console.log(currentObj)
+      <!-- <small>blog number - {{currentBlog.blogId}}</small> -->
+
+      <p>Born on {{currentObj.born}} Gender is {{currentObj.gender}}</p>
+
+      <h5>culture is - {{currentObj.culture}}</h5>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-md-4">
+
+      <a class="btn btn-primary" [routerLink]="['/edit',currentObj.seriesId]">Edit </a>
+
+    </div>
+    <div class="col-md-4">
+
+      <a class="btn btn-danger" (click)="deleteThisBlog()">Delete </a>
+
+    </div>
+    <div class="col-md-4">
+
+      <a class="btn btn-warning" (click)="goBackToPreviousPage()">Go Back </a>
+    </div>
+  </div>
+
+</div>
